@@ -1,0 +1,8 @@
+ 1. Sobre el código provisto:
+ 
+* **I. ¿Compila exitosamente el siguiente programa? ¿Por qué?**
+Sí compila exitosamente, ya que el constructor de la clase derivada invoca explícitamente y de forma correcta al constructor de la clase base mediante la lista de inicialización (`ClaseDerivada (int x): ClaseBase(x) {}`).
+
+* **II. ¿Qué resultados se obtiene luego de su ejecución?**
+Se obtiene por pantalla:
+`unaVar = 50`
