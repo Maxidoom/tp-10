@@ -1,0 +1,71 @@
+1. **¿Qué son los modificadores de acceso a atributos y métodos?**
+Son palabras clave que definen la visibilidad y el nivel de accesibilidad de los atributos y métodos de una clase desde el exterior u otras clases.
+
+* **¿Cuáles son los diferentes modificadores de acceso disponibles en C++?**
+`public`, `private` y `protected`.
+
+* **¿Cómo se utilizan los modificadores de acceso para controlar el acceso a los atributos y métodos de una clase?**
+Se anteponen a la declaración de los miembros en la clase. `public` permite el acceso libre desde fuera de la clase; `private` oculta los miembros permitiendo que solo sean accesibles por los métodos de la propia clase; y `protected` se comporta de manera similar al privado pero permite que los miembros sean heredados por las clases derivadas.
+
+2. **¿Qué es un constructor de clase?**
+Es un método especial de una clase que se ejecuta automáticamente al crear un objeto de la misma.
+
+* **¿Cuál es el propósito de un constructor de clase?**
+Inicializar los atributos del objeto o preparar su estado inicial (como asignar valores por defecto o recibir parámetros para configurarlo).
+
+* **¿Cómo se define un constructor de clase en C++?**
+Lleva exactamente el mismo nombre de la clase y no especifica ningún tipo de dato de retorno. Ejemplo: `EstructuraVector();` o `EstructuraVector(int valor);`.
+
+3. **¿Qué es un destructor de clase?**
+Es un método especial que se ejecuta automáticamente cuando un objeto sale de su ámbito o es destruido, utilizado para liberar recursos (el documento menciona que no son heredables y forman parte de los miembros especiales).
+
+* **¿Cuál es el propósito de un destructor de clase?**
+Liberar memoria dinámica u otros recursos adquiridos durante el ciclo de vida del objeto.
+* **¿Cómo se define un destructor de clase en C++?**
+Se define utilizando el nombre de la clase precedido por el símbolo tilde (`~`), sin parámetros ni valor de retorno (ej. `~MiClase();`).
+
+4. **¿Qué es la parte private y public de una clase en C++?**
+Son secciones delimitadas dentro de la definición de una clase que agrupan los miembros según su visibilidad.
+
+* **¿Cuáles son las diferencias entre las partes private y public de una clase?**
+Los miembros de la sección `private` están ocultos y no se puede acceder a ellos directamente desde fuera de la clase, mientras que los de la sección `public` forman parte de la interfaz pública y pueden ser invocados o consultados desde cualquier parte del programa (como en el `main`).
+
+* **¿Cómo se utilizan los modificadores de acceso private y public para controlar el acceso a los atributos y métodos de una clase?**
+Por lo general, los atributos se declaran en la sección `private` para proteger los datos y evitar alteraciones indebidas, y los métodos que operan sobre ellos se colocan en la sección `public` para permitir la interacción controlada.
+
+5. **¿Qué es la sobrecarga de métodos?**
+Es la capacidad de definir dos o más métodos con el mismo nombre dentro de una misma clase.
+
+* **¿Cuál es el propósito de la sobrecarga de métodos?**
+Facilitar la reducción de nombres de métodos cuando realizan la misma actividad lógica pero operan con distintos tipos o cantidades de datos.
+
+* **¿Cómo se implementa la sobrecarga de métodos en C++?**
+Declarando los métodos con el mismo nombre pero asegurando que difieran en la cantidad de parámetros o en el tipo de datos de los mismos.
+
+6. **¿Qué es la colaboración de clases en C++?**
+Es la relación de asociación en la que una clase contiene uno o más objetos de otra clase como atributos (relación del tipo "...tiene un..." o "...es parte de...").
+
+* **¿Cuál es el propósito de la colaboración de clases?**
+Permitir que múltiples entidades del mundo real interactúen y se comuniquen entre sí para resolver problemas complejos orientados a objetos.
+
+* **¿Cómo se implementa la colaboración de clases en C++?**
+Declarando objetos de una clase colaboradora como atributos dentro de otra clase y utilizando sus métodos públicos.
+
+7. **¿Qué es la herencia?**
+Es el mecanismo mediante el cual se pueden crear nuevas clases (subclases o clases derivadas) a partir de clases existentes (superclases o clases base), heredando automáticamente sus atributos y métodos.
+
+* **¿Cuáles son los diferentes tipos de herencia?**
+* Según el acceso: Pública, protegida y privada.
+
+* Según la jerarquía: Simple, múltiple, multinivel, jerárquica e híbrida.
+
+* **¿Cuáles son las ventajas y desventajas que ofrece?**
+* *Ventajas:* Permite la reutilización de código, evita la redundancia y facilita la especialización de clases.
+
+* *Desventajas:* Puede incrementar el acoplamiento entre clases si no se diseña correctamente la jerarquía.
+
+* **Cómo se implementa en C++?**
+Colocando dos puntos después de la clase derivada seguidos del modificador de acceso y el nombre de la clase base (ej. `class Subclase : public Superclase`).
+
+8. **¿Cuál es la diferencia entre la colaboración y la herencia en programación orientada a objetos?**
+La colaboración responde a una relación de tipo "...tiene un..." o "...es parte de...", donde una clase posee objetos de otra como atributos. En cambio, la herencia responde a una relación del tipo "...es un...", donde una clase derivada hereda la estructura y el comportamiento de una clase base.
